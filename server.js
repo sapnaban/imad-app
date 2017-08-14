@@ -52,7 +52,7 @@ function createtemplate(data){
             </div>
         </body>
     </html>`;
-    return htmltemplate;
+    return htmlTemplate;
 }
 
 app.use(morgan('combined'));
