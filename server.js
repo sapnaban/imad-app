@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 var articles = {
-        article1 : {
+        articleOne : {
             title:  'Article One | Sriram Anantha Padmanaban',
             heading: 'Article One',
             date: `<p id="demo"></p>
@@ -20,7 +20,7 @@ var articles = {
                         This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
                     </p>`
         },
-        article2 : {
+        articleTwo : {
             title:  'Article Two | Sriram Anantha Padmanaban',
             heading: 'Article Two',
             date: `<p id="demo"></p>
@@ -38,7 +38,7 @@ var articles = {
                     </p>`
             
         },
-        article3 : {
+        articleThree : {
             title:  'Article Three | Sriram Anantha Padmanaban',
             heading: 'Article Three',
             date: `<p id="demo"></p>
@@ -98,8 +98,8 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-app.get('/article-one', function(req,res){
-   res.send(createtemplate(article1));
+app.get('/:articleName', function(req,res){
+   res.send(createtemplate(articles[articleName]));
 });
 
 app.get('/article-two', function(req, res){
