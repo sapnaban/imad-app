@@ -1,8 +1,60 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
-
 var app = express();
+var article1 = {
+    title:  'Article One | Sriram Anantha Padmanaban',
+    heading: 'Article One',
+    date: `<p id="demo"></p>
+        <script>
+            document.getElementById("demo").innerHTML = Date();
+        </script>`,
+    Content:`<p>
+                This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
+            </p>
+            <p>
+                This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
+            </p>
+            <p>
+                This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
+            </p>`
+};
+
+function createtemplate(data){
+    var title = data.title;
+    var date = data.data;
+    var heading = data.heading;
+    var content = data.content;
+    var htmlTemplate = `
+        <!Doctype html>
+        <head>
+            <title>
+                ${title}
+            </title>
+            <meta name="view port" content="width=device-width, intial-scale=1"/>
+            <link href="/ui/style.css" rel="stylesheet">
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <a href = "/"> Home</a>
+                </div>
+                <hr />
+                <h3> 
+                    ${heading}
+                </h3>
+                <div>
+                    ${date}
+                </div>
+                <div>
+                    ${content}
+                </div>
+            </div>
+        </body>
+    </html>`;
+    return htmltemplate;
+}
+
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
@@ -10,7 +62,7 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req,res){
-   res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
+   res.send(createtemplate(article1));
 });
 
 app.get('/article-two', function(req, res){
