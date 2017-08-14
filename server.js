@@ -22,9 +22,9 @@ var article1 = {
 
 function createtemplate(data){
     var title = data.title;
-    var date = data.data;
+    var date = data.date;
     var heading = data.heading;
-    var content = data.content;
+    var Content = data.Content;
     var htmlTemplate = `
         <!Doctype html>
         <head>
