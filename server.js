@@ -2,22 +2,59 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var app = express();
-var article1 = {
-    title:  'Article One | Sriram Anantha Padmanaban',
-    heading: 'Article One',
-    date: `<p id="demo"></p>
-        <script>
-            document.getElementById("demo").innerHTML = Date();
-        </script>`,
-    Content:`<p>
-                This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
-            </p>
-            <p>
-                This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
-            </p>
-            <p>
-                This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
-            </p>`
+var articles = {
+        article1 : {
+            title:  'Article One | Sriram Anantha Padmanaban',
+            heading: 'Article One',
+            date: `<p id="demo"></p>
+                <script>
+                    document.getElementById("demo").innerHTML = Date();
+                </script>`,
+            Content:`<p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
+                    </p>
+                    <p>
+                        This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
+                    </p>`
+        },
+        article2 : {
+            title:  'Article Two | Sriram Anantha Padmanaban',
+            heading: 'Article Two',
+            date: `<p id="demo"></p>
+                <script>
+                    document.getElementById("demo").innerHTML = Date();
+                </script>`,
+            Content:`<p>
+                        This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.
+                    </p>
+                    <p>
+                        This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.  
+                    </p>
+                    <p>
+                        This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article.This is the content for my second article. 
+                    </p>`
+            
+        },
+        article3 : {
+        title:  'Article Three | Sriram Anantha Padmanaban',
+        heading: 'Article Three',
+        date: `<p id="demo"></p>
+            <script>
+                document.getElementById("demo").innerHTML = Date();
+            </script>`,
+        Content:`<p>
+                    This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
+                </p>
+                <p>
+                    This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
+                </p>
+                <p>
+                    This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
+                </p>`
+        }
 };
 
 function createtemplate(data){
