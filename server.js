@@ -3,7 +3,7 @@ var morgan = require('morgan');
 var path = require('path');
 var app = express();
 var articles = {
-        'article-One' : {
+        'article-one' : {
             title:  'Article One | Sriram Anantha Padmanaban',
             heading: 'Article One',
             date: `<p id="demo"></p>
@@ -20,7 +20,7 @@ var articles = {
                         This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article.  
                     </p>`
         },
-        'article-Two' : {
+        'article-two' : {
             title:  'Article Two | Sriram Anantha Padmanaban',
             heading: 'Article Two',
             date: `<p id="demo"></p>
@@ -38,7 +38,7 @@ var articles = {
                     </p>`
             
         },
-        'article-Three' : {
+        'article-three' : {
             title:  'Article Three | Sriram Anantha Padmanaban',
             heading: 'Article Three',
             date: `<p id="demo"></p>
