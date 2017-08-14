@@ -39,21 +39,21 @@ var articles = {
             
         },
         article3 : {
-        title:  'Article Three | Sriram Anantha Padmanaban',
-        heading: 'Article Three',
-        date: `<p id="demo"></p>
-            <script>
-                document.getElementById("demo").innerHTML = Date();
-            </script>`,
-        Content:`<p>
-                    This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
-                </p>
-                <p>
-                    This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
-                </p>
-                <p>
-                    This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
-                </p>`
+            title:  'Article Three | Sriram Anantha Padmanaban',
+            heading: 'Article Three',
+            date: `<p id="demo"></p>
+                <script>
+                    document.getElementById("demo").innerHTML = Date();
+                </script>`,
+            Content:`<p>
+                        This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
+                    </p>
+                    <p>
+                        This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
+                    </p>
+                    <p>
+                        This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article. This is the content for my third article.  
+                    </p>`
         }
 };
 
