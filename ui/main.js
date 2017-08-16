@@ -1,6 +1,12 @@
 console.log('Loaded!');
 var element = document.getElementById("main-text");
 element.innerHTML = "New Value";
-
+var marginleft = 0;
 var img = document.getElementById ("img");
-console.log(img);
+function MoveRight(){
+    marginleft += 1;
+    img.style.marginleft += 'px';
+}
+img.onclick = function(){
+    var interval = setInterval(MoveRight, 10);
+};
