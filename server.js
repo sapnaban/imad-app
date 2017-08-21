@@ -103,10 +103,10 @@ var articleName = req.params.articleName;
     res.send(createtemplate(articles[articleName]));
 });
 
-var counter = 0;
+var vcounter = 0;
 app.get('/Counter', function(req,res){
-    counter = counter + 1;
-    res.send(counter.toString());
+    vcounter = vcounter + 1;
+    res.send(vcounter.toString());
 });
 
 app.get('/ui/style.css', function (req, res) {
